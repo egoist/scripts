@@ -8,9 +8,8 @@ const fetch = require('node-fetch')
 
 setInterval(() => {
   fetch('https://github.com/egoist')
-    .then(data => data.text())
     .then(data => {
-      if (data.indexOf(`Sorry, we're down for maintenance`) === -1) {
+      if (data.status === 200) {
         notifier.notify({
           'title': 'Check GitHub',
           'message': '√ Up!'
