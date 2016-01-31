@@ -23,7 +23,6 @@ co(function* () {
     const el = $(this)
     co(function* () {
       const url = `http://bbs.005.tv/${el.attr('file')}`
-      const fileName = path.basename(el.attr('file'))
       yield pget(`${url}`)
     }).catch(err => console.log(err))
   })
