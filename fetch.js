@@ -2,6 +2,7 @@ const co = require('co')
 const aimer = require('aimer')
 const path = require('path')
 const nugget = require('nugget')
+require('shelljs/global')
 
 mkdir('-p', 'data/粗点心战争')
 
